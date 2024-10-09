@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(87, 87, 87);
+            margin: 0px;
+        }
+
+        header{
+            background-color: rgb(235, 176, 208);
+            padding: 10px;
+            margin: 10px;
+            
+            
+        }
+
+        h1{
+            box-shadow: inset -1px 1px 11px 4px rgba(0, 0, 0, 0.555);
+        }
+
+        nav{
+            background-color: rgba(27, 0, 0, 0.788);
+            padding: 3px;
+            box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.486);
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: rgb(190, 180, 180);
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover{
+            text-decoration: underline;
+        }
+
+        main{
+            background-color: rgb(235, 176, 208);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            box-shadow: -4px 3px 8px 1px rgba(0, 0, 0, 0.507);
+        }
+
+        article{
+            background-color: rgb(177, 133, 140);
+            padding: 5px;
+        }
+           
+         article > aside{
+            background-color: rgb(104, 77, 81);
+         }
+
+        footer{
+            background-color: rgb(27, 0, 0);
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p{
+            margin: 0px;
+        }
+
+        div#bola{
+            height: 100px;
+            width: 100px;
+            background-color: aliceblue;
+            margin: 10px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+       <header><!--CABEÇALHO-->
+
+          <h1>Meu site</h1>
+
+          <nav>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+         </nav>
+       </header><!--FIM DO CABEÇALHO-->
+
+       <main> <!--CONTEÚDO PRINCIPAL-->
+
+         <section id="assuntos">
+           <p>Tecnologias artificiais</p>
+         </section>
+         <section id="noticias">
+
+            <article><!--COMEÇO DO ARTICLE-->
+
+                <h2>Noticias</h2>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dicta omnis ipsum molestias dolores eligendi, sapiente vitae distinctio cumque in animi corrupti, mollitia cupiditate nostrum velit est blanditiis, perferendis nemo.</p>
+
+               <aside><!--COMEÇO ASIDE-->
+
+                 <p>Artigo escrito por Laryssa</p>
+
+               </aside><!--FIM ASIDE-->
+
+            </article><!--FIM ARTICLE-->
+
+            <article>
+
+            </article>
+         </section>
+       </main><!--FIM CONTEÚDO PRINCIPAL-->
+
+       <footer> <!--RODAPÉ-->
+         <p>Desenvolvido por Laryssa</p>
+       </footer><!--FIM DO RODAPÉ-->
+
+       <div id="bola">
+
+       </div>
+</body>
+</html>

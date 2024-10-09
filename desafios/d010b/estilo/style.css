@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*Fonte BEBAS do cabeçalho*/
+
+@font-face {  /*Fonte ANDROID do main (h1,h2) etc*/
+
+    font-family: 'Android'; /*Aqui você pode escolher qualquer nome para sua fonte*/
+
+    src: url('../fontes/idroid.otf') format('opentype'); /* Ele serve para acessar arquivos que estão em pastas superiores à do arquivo atual. Cada ../ sobe um nível*/
+
+    font-weight: normal; /*Para aumentar o nível de negrito da fonte*/
+}
+
+/*A raiz da árvore do documento, td oq definir no root servirá pro documento inteiro.*/
+ :root{  
+      --cor0:  #c5ebd6;
+      --cor01: #83e1ad;
+      --cor02: #3ddc84;
+      --cor03: #2fa866;
+      --cor04: #1a5c37;
+      --cor05: #063d1e;
+
+      --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; /*Vc pode escolher qualquer nome
+      de preferência que seja semântico --fonte-principal e etc.*/
+      --fonte-destaque: 'Bebas Neue', cursive;
+      --fonte-android: 'Android', cursive;
+ }
+
+ *{ /*Configurações globais*/
+    margin: 0px;
+    padding: 0px;
+ }
+
+body{
+    background-color: var(--cor0); /*O fundo principal do nosso body será da cor 0, azul/verde 
+    claro.*/
+    font-family: var(--fonte-padrao); /*A fonte family do nosso conteúdo do body vai ser
+    padrão Arial nos parágrafos caso também o google não identificar as outras.*/
+}
+
+a.externo::after{   /*Aqui chamei o link, com a classe "externo" com um pseudo-elemento
+    after que seria oq vai aparecer depois, ou seja, o símbolo do link. */
+
+    content: '\00A0\1F517'; /*Content para gerar e inserir conteúdo no documento. Ela permite adicionar texto ou outros elementos, como ícones ou imagens, antes ou depois do conteúdo real de um elemento HTML, sem precisar alterar o HTML diretamente.Utilizado apenas no before e after
+    */ /*Já o \00A0\ serve para dar um espaço entre o símbolo e o texto html, o 1F517 é apenas
+    o código do emoji de link.*/
+}
+
+header{ /*Aqui temos o seletor do nosso cabeçalho*/
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor05)); /*Defini que
+    o fundo do cabeçalho seria gradiente, para baixo na cor 03 e 05 do tom médio ao
+    mais escuro*/
+    min-height: 150px; /*Defini que o mínimo da altura do cabeçalho seria de 150px*/
+    text-align: center; /*Aqui o text-align dele é center, ou seja, todo texto que tiver no
+    cabeçalho será centralizado.*/
+    padding-top: 40px; /*Defini que o padding-top (a parte de cima) do cabeçalho terá um
+    acolchoamento de 40px*/
+}
+
+
+header > h1{ /*Chamei o header e o filho do header que é o h1 (oq está dentro)*/
+
+     color: white; /*Defini que a cor do meu título h1 dentro do header seria branca*/
+
+     font-family: var(--fonte-destaque); /*Defini que a font-family do meu h1 seria a fonte
+     destaque presente no root BEBAS*/
+
+     font-size: 3em; /*Defini que sua fonte-size (tamanho da fonte) fosse de 3em maior*/
+
+     font-weight: normal; /*Defini novamente que sua fonte-weight não tivesse negrito*/
+
+     margin-bottom: 20px; /*Defini que meu margin-bottom h1 tivesse um espaçamento de 20px*/
+
+     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.548); /*Defini que ele terá um text-shadow
+     (sombra) de 2px a direita, 2px em baixo e 0px de espalhamento e a cor black alfa (com
+     opacidade baixa*/
+}
+
+
+header > p{ /*Chamei o header e o filho dele que é o parágrafo que também está incluído
+    no cabeçalho.*/
+
+    color: white; /*Defini que a cor do parágrafo do cabeçalho será branca.*/
+
+    font-family: var(--fonte-padrao); /*Defini que a fonte família do parágrafo será a 
+    padrão, Arial Helvetica etc.*/
+
+    font-size: 1.2em; /*Defini que o tamanho da fonte do parágrafo será de 1.2em pra não
+    ficar tão grande*/
+
+    max-width: 600px; /*Máximo de largura do parágrafo*/
+
+    padding-right: 10px; /*O Padding direito terá 10px*/
+
+    padding-left: 10px; /*O Padding esquerdo terá 10px*/
+
+    margin: auto;  /*Pelo fato do Header ser um box-level(caixa) defini que o margin dele
+    será auto pra ficar o parágrafo ficar centralizado*/
+
+    margin-bottom: 30px; /*Defini que o margin de baixo do parágrafo será de 30px*/
+
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.548); /*Defini mais uma sombra só que
+    pro parágrafo. 2px à direita, 2px para baixo ou cima, 0px de espalhamento/blur e cor preto alfa
+    */
+}
+
+
+nav{ /*Como explicado antes, serve para os menus do site logo abaixo do cabeçalho*/
+
+    background-color: var(--cor05); /*Defini que a cor de fundo dele seria a mais escura 5*/
+
+    padding: 10px; /*Defini que o Padding dos menus seria de 10px de todos os lados*/
+
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.521); /*A sombra dos menus 0px à esquerda
+    7px abaixo e 9px de espalhamento/blur e cor black alfa*/
+}
+
+
+nav > a{ /*Chamei o nav e o filho dele que é a Âncora(link)*/
+
+    color: var(--cor01); /*Defini que a cor seria um verde claro dos links*/
+
+    padding: 10px; /*Defini que o padding do nav seria de 10px*/
+
+    border-radius: 5px; /*Defini que teria uma leve borda ao redor de 5px*/
+
+    text-decoration: none; /*Defini que a decoração de texto dele será nenhuma
+    (tira o traçado dos links).*/
+
+    font-weight: bold; /*Defini que o font-weight dele seria bold, negrito.*/
+}
+
+nav > a:hover{ /*Chamei o nav junto com o filho dele <a> e uma pseudo-classe hover*/
+
+    background-color: var(--cor03); /*Defini que quando pasasse o mouse em cima dos menus
+    links, o background color dele ficará de um tom verde médio.*/
+
+    color: var(--cor05); /*E a cor da letra dos links será a mais escura no tom 5 quando passar
+    o mouse em cima*/
+
+    transition-duration: 0.5s; /*Defini que ao passar o mouse em cima do menu, sua 
+    transação será de 0.5 segundos*/
+}
+
+main{ /*Agora as config do nosso conteúdo principal*/
+
+    min-width: 300px; /**/
+    max-width: 1000px; /**/
+    margin: auto;  /**/
+    margin-bottom: 30px; /**/
+    padding: 20px;  /**/
+    background-color: white; /**/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.404); /**/
+    border-bottom-left-radius: 10px; /**/
+    border-bottom-right-radius: 10px; /**/
+}
+
+main h1{ /**/
+    color: var(--cor05); /**/
+    font-family: var(--fonte-android); /**/
+    font-weight: normal; /**/ 
+    font-size: 1.8em; /**/
+}
+
+main h2{ /**/
+     font-family: var(--fonte-android); /**/
+     color: var(--cor04); /**/
+     font-size: 1.3em; /**/
+     font-weight: normal;  /**/
+     background-image: linear-gradient(to right, var(--cor01), transparent); /**/
+     text-indent: 8px; /**/
+}
+
+main p{ /**/
+    margin: 15px 0px 15px 0px; /**/
+    text-align: justify;  /**/
+    text-indent: 30px;  /**/
+    line-height: 2em;  /**/
+    font-size: 1em;  /**/
+}
+
+main img{   /**/
+    width: 100%;  /**/
+}
+
+main img.pequena{ /**/
+    max-width: 350px; /**/
+    display: block;  /**/
+    margin: auto;    /**/
+}
+
+main strong{  /**/
+    color: var(--cor04); /**/
+    font-weight: bold; /**/
+}
+
+main a{ /**/
+    text-decoration: none; /**/
+    font-weight: bold;  /**/
+    color: var(--cor05); /**/
+    background-color: var(--cor01); /**/
+    padding: 2px 6px; /**/
+}
+
+main a:hover{ /**/
+     text-decoration: underline; /**/
+     color: var(--cor04); /**/
+}
+
+div.video{ /**/
+    background-color: var(--cor05); /**/
+    margin: 0px -20px 30px -20px; /**/
+    padding: 20px; /**/
+    padding-bottom: 59%; /**/
+    position: relative; /**/
+}
+
+div.video > iframe{ /**/
+    position: absolute; /**/
+    top: 5%; /**/
+    left: 5%; /**/
+    width: 90%; /**/
+    height: 90%; /**/
+}
+
+aside{ /**/
+    background-color: var(--cor01); /**/
+    padding: 10px; /**/
+    border-radius: 10px; /**/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.356); /**/
+}
+
+aside > h3{ /**/
+    background-color: var(--cor04); /**/
+    color: white; /**/
+    padding: 10px; /**/
+    margin: -10px -10px 0px -10px;  /**/
+    border-radius: 10px 10px 0px 0px; /**/
+}
+
+aside > ul{ /**/
+    list-style-type: '\2714\00A0\00A0'; /*Espaço do ✔️ (obs: não é compatível com todo
+    navegador.*/
+    list-style-position: inside; /**/
+    columns: 2; /**/
+}
+
+footer{ /**/
+    background-color: var(--cor05); /**/
+    color: white; /**/
+    text-align: center; /**/
+    font-size: 0.8em; /**/
+    padding: 5px; /**/
+}
+
+footer > p > a{ /**/
+    color: white; /**/
+    font-weight: bolder; /**/
+    text-decoration: none; /**/
+}
+
+footer > p > a:hover{ /**/
+    text-decoration: underline; /**/
+    color: var(--cor01); /**/
+}
